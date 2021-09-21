@@ -29,14 +29,28 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Text("Hello Flutter",
-            style: TextStyle(
-              fontSize: 32,
-              fontWeight: FontWeight.bold,
-              fontStyle: FontStyle.italic,
-              color: Colors.red,
-              backgroundColor: Colors.black,
-            )),
+        child: TextWidget(),
+      ),
+    );
+  }
+}
+
+class TextWidget extends StatelessWidget {
+  const TextWidget({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      "Hello Flutter",
+      style: TextStyle(
+        fontSize: 32,
+        fontWeight: FontWeight.bold,
+        fontStyle: FontStyle.italic,
+        color: Colors.red,
+        backgroundColor: Colors.black,
+        fontFamily: "Balsamiq Sans",
       ),
     );
   }
